@@ -3,7 +3,7 @@
 $sessionId   = $_POST["sessionId"];
 $serviceCode = $_POST["serviceCode"];
 $phoneNumber = $_POST["phoneNumber"];
-$text = $_POST["text"];
+$text = $request->get('text');
 
 if ($text == "") {
     // This is the first request. Note how we start the response with CON
