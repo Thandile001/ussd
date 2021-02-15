@@ -3,26 +3,40 @@
 $sessionId   = $_POST["sessionId"];
 $serviceCode = $_POST["serviceCode"];
 $phoneNumber = $_POST["phoneNumber"];
-$text = $_GET["text"];
+$text = $_POST["text"];
 
 if ($text == "") {
     // This is the first request. Note how we start the response with CON
-    $response  = "CON Would you like to port your phone number? \n";
-    $response .= "1. Yes \n";
-    $response .= "2. No";
+    $response  = "CON What would you want to check \n";
+    $response .= "1. My Account Number \n";
+    $response .= "2. My phone number";
 
 } else if ($text == "1") {
     // Business logic for first level response
-    $response = "CON Please enter you SIM card PIN";
+    $response = "CON Choose account information you want to view \n";
+    $response .= "1. Account number \n";
+    $response .= "2. Account balance";
+
+} else if ($text == "2") {
+    // Business logic for first level response
+    // This is a terminal request. Note how we start the response with END
+    $response = "END Your phone number is ".$phoneNumber;
+
+} else if($text == "1*1") { 
+    // This is a second level response where the user selected 1 in the first instance
+    $accountNumber  = "202102151001";
+
+    // This is a terminal request. Note how we start the response with END
+    $response = "END Your account number is ".$accountNumber;
+
+} else if ( $text == "1*2" ) {
+    // This is a second level response where the user selected 1 in the first instance
+    $balance  = "ZAR 10,000";
+
+    // This is a terminal request. Note how we start the response with END
+    $response = "END Your balance is ".$balance;
 }
 
-    $response = "END Your data has been captured successfully! Thank you for registering for Django online classes at HLAB.";
-}
-
-} else if($text == "2") { 
-        // This is a terminal request. Note how we start the response with END
-    $response = "END Your porting request has been declined.";
-    
 // Echo the response back to the API
 header('Content-type: text/plain');
 echo $response;
