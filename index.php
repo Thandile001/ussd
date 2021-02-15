@@ -14,7 +14,12 @@ if ($text == "") {
 } else if ($text == "1") {
     // Business logic for first level response
     $response = "CON Please enter your SIM Card PIN;
-
+    
+} else if ($text == "1*1") {
+    // Business logic for first level response
+    // This is a terminal request. Note how we start the response with END
+    $response = "GET Text";
+    
 } else if ($text == "2") {
     // Business logic for first level response
     // This is a terminal request. Note how we start the response with END
