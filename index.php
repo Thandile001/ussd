@@ -3,6 +3,7 @@
 $sessionId   = $_POST["sessionId"];
 $serviceCode = $_POST["serviceCode"];
 $phoneNumber = $_POST["phoneNumber"];
+$pinnumber = $GET["Pin"];
 $text = $_POST["text"];
 
 if ($text == "") {
@@ -14,16 +15,17 @@ if ($text == "") {
 } else if ($text == "1") {
     // Business logic for first level response
     $response = "CON Your are about to port your SIM car \n";
-    $response .= "1. Please enter your SIM PIN";
+    $pinnumber .= "1. Please enter your SIM PIN";
+    
+} else if($text == "1*1") { 
+    // This is a terminal request. Note how we start the response with END
+    $response = "END Your mobile number has been ported, please insert your new SIM car";$pinnumber
 
 } else if ($text == "2") {
     // Business logic for first level response
     // This is a terminal request. Note how we start the response with END
     $response = "END Your port request has been declined";
 
-} else if($text == "1*1") { 
-    // This is a terminal request. Note how we start the response with END
-    $response = "END Your mobile number has been ported, please insert your new SIM car";
 }
 
 // Echo the response back to the API
