@@ -3,7 +3,7 @@
 $sessionId   = $_POST["sessionId"];
 $serviceCode = $_POST["serviceCode"];
 $phoneNumber = $_POST["phoneNumber"];
-$text = $request->get('text');
+$text = $request_GET["text"];
 
 if ($text == "") {
     // This is the first request. Note how we start the response with CON
@@ -17,9 +17,8 @@ if ($text == "") {
     
 } else if ($text == "1*1") {
     // Business logic for first level response
-    // This is a terminal request. Note how we start the response with END
-    $response = "GET Text";
-    
+    $response = "*".$text;
+
 } else if ($text == "2") {
     // Business logic for first level response
     // This is a terminal request. Note how we start the response with END
