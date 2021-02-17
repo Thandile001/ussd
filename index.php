@@ -135,6 +135,16 @@ if ($text == "") {
     // Business logic for first level response
     // This is a terminal request. Note how we start the response with END
     $response = "END Unfortunately, we have no promotions available.";
+    
+} else if ($text == "1*4") {
+    // Business logic for first level response
+    $response = "CON Verify Gift Cards. \n";
+    $response .= "1. Please enter Gift Voucher number.";
+    
+} else if ($text == "1*4*1") {
+    // Business logic for first level response
+    // This is a terminal request. Note how we start the response with END
+    $response = "END Unfortunately, the Gift Voucher number is invalid. Please try with another voucher number.";
 
 } else if($text == "1*5") { 
     // This is the first request. Note how we start the response with CON
