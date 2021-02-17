@@ -21,6 +21,12 @@ if ($text == "") {
     $response .= "4. Veriy Gift Card \n";
     $response .= "5. Back";
     
+ } else if ($text == "2") {
+    // Business logic for first level response
+    $response = "CON DStv Installer \n";
+    $response .= "1. Find nearby installer \n";
+    $response .= "2. Verify Installer";
+    
 } else if($text == "1*1") { 
     // This is the first request. Note how we start the response with CON
     $response  = "CON How can we help you? \n";
