@@ -85,7 +85,7 @@ if ($text == "") {
  } else if ($text == "1*2*1*1") {
     // Business logic for first level response
     // This is a terminal request. Note how we start the response with END
-    $response = "END Thank you Mr Jwambi, you are on DStv Premium. Decoder ID: H001283850. IUC SN: 7028026166. Model: 5U.";
+    $response = "END Thank you Mr Jwambi, you are on DStv Premium @ R819.00p/m. Decoder ID: H001283850. IUC SN: 7028026166. Model: 5U. Please note, your premium will increase to R829 effective on 01 March 2021.";
 }
 
 // Echo the response back to the API
