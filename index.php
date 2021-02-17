@@ -19,16 +19,19 @@ if ($text == "") {
     $response .= "2. My Decoder \n";
     $response .= "3. Notices \n";
     $response .= "4. Veriy Gift Card \n";
-    $response .= "0. Back";
+    $response .= "5. Back";
 
 } else if ($text == "2") {
     // Business logic for first level response
     // This is a terminal request. Note how we start the response with END
     $response = "END Mr Jwambi, your port request has been declined.";
 
-} else if($text == "1*0") { 
-    // This is a terminal request. Note how we start the response with END
-    $response = "1.";
+} else if($text == "1*5") { 
+    // This is the first request. Note how we start the response with CON
+    $response  = "CON Welcome Mr T Jwambi to your DStv Premium account. How can we help you? \n";
+    $response .= "1. My Account \n";
+    $response .= "2. Check DStv Installer ID \n";
+    $response .= "2. Settings";
 }
 
 // Echo the response back to the API
