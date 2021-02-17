@@ -9,7 +9,7 @@ if ($text == "") {
     // This is the first request. Note how we start the response with CON
     $response  = "CON Welcome Mr T Jwambi to your DStv Premium account. How can we help you? \n";
     $response .= "1. My Account \n";
-    $response .= "2. DStv Registered Installer \n";
+    $response .= "2. DStv Installer \n";
     $response .= "3. Settings";
 
 } else if ($text == "1") {
@@ -162,7 +162,7 @@ if ($text == "") {
     // This is the first request. Note how we start the response with CON
     $response  = "CON Welcome Mr T Jwambi to your DStv Premium account. How can we help you? \n";
     $response .= "1. My Account \n";
-    $response .= "2. DStv Registered Installer Guide \n";
+    $response .= "2. DStv Installer \n";
     $response .= "3. Settings";
     
  } else if ($text == "1*5*1") {
