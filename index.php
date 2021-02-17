@@ -27,6 +27,13 @@ if ($text == "") {
     $response .= "1. Find nearby installer \n";
     $response .= "2. Verify Installer";
     
+  } else if ($text == "3") {
+    // Business logic for first level response
+    $response = "CON Settings \n";
+    $response .= "1. Upgrade DStv Package \n";
+    $response .= "2. Change PIN \n";
+    $response .= "3. Close DStv Account";
+    
 } else if($text == "1*1") { 
     // This is the first request. Note how we start the response with CON
     $response  = "CON How can we help you? \n";
