@@ -24,18 +24,18 @@ if ($text == "") {
 } else if($text == "1*1") { 
     // This is the first request. Note how we start the response with CON
     $response  = "CON How can we help you? \n";
-    $response .= "1. Revers debit oder \n";
-    $response .= "2. Cancel my DStv subscription";
+    $response .= "1. Revers debit oder. \n";
+    $response .= "2. Cancel my DStv subscription.";
     
 } else if ($text == "1*1*1") {
     // Business logic for first level response
-    $response = "CON Reverse Debit Order \n";
-    $response .= "1. Please enter your SIM card PIN";
+    $response = "CON Reverse Debit Order. \n";
+    $response .= "1. Please enter your DStv account PIN.";
     
  } else if ($text == "1*1*1*1") {
     // Business logic for first level response
-    $response = "CON Reverse Debit Order \n";
-    $response .= "1. Please enter amount to be reversed";
+    $response = "CON Reverse Debit Order. \n";
+    $response .= "1. Please enter amount to be reversed.";
     
 } else if ($text == "1*1*1*1*1") {
     // Business logic for first level response
@@ -44,8 +44,8 @@ if ($text == "") {
     
  } else if ($text == "1*1*2") {
     // Business logic for first level response
-    $response = "CON Cancelling DStv subscription \n";
-    $response .= "1. Please enter your SIM card PIN";
+    $response = "CON Cancelling DStv subscription. \n";
+    $response .= "1. Please enter your DStv account PIN.";
     
  } else if ($text == "1*1*2*1") {
     // Business logic for first level response
@@ -67,6 +67,25 @@ if ($text == "") {
     $response .= "3. Notices \n";
     $response .= "4. Veriy Gift Card \n";
     $response .= "5. Back";
+    
+ } else if ($text == "1*2") {
+    // Business logic for first level response
+    $response = "CON My Decoder \n";
+    $response .= "1. View Decoder Information \n";
+    $response .= "2. Add Decoder \n";
+    $response .= "3. Remove Decoder \n";
+    $response .= "4. Suspend Decoder \n";
+    $response .= "5. Back";
+    
+  } else if ($text == "1*2*1") {
+    // Business logic for first level response
+    $response = "CON Decoder Information. \n";
+    $response .= "1. Please enter your DStv account PIN.";
+    
+ } else if ($text == "1*2*1*1") {
+    // Business logic for first level response
+    // This is a terminal request. Note how we start the response with END
+    $response = "END Thank you Mr Jwambi, you are on DStv Premium. Decoder ID: H001283850. IUC SN: 7028026166. Model: 5U.";
 }
 
 // Echo the response back to the API
