@@ -194,7 +194,7 @@ if ($text == "") {
     // This is a terminal request. Note how we start the response with END
     $response = "END Thank you Mr Jwambi, you are on DStv Premium @ R819.00p/m. Decoder ID: H001283850. IUC SN: 7028026166. Model: 5U. Please note, your premium will increase to R829 effective on 01 March 2021.";
  
- } else if ($text == "2*1") {
+ } if ($text == "2*1") {
     // Business logic for first level response
     $response = "CON DStv Registered Installer. \n";
     $response = "1.Find Nearby Installer. \n";
