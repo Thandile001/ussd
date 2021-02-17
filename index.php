@@ -158,13 +158,7 @@ if ($text == "") {
     // Business logic for first level response
     // This is a terminal request. Note how we start the response with END
     $response = "END Unfortunately, the Gift Voucher number is invalid. Please try with another voucher number.";
-    
-} else if ($text == "2*1*1") {
-    // Business logic for first level response
-    $response = "CON DStv Registered Installer. \n";
-    $response = "1.Find Nearby Installer. \n";
-    $response .= "2. Verify DStv Installer.";
-    
+        
 } else if($text == "1*5") { 
     // This is the first request. Note how we start the response with CON
     $response  = "CON Welcome Mr T Jwambi to your DStv Premium account. How can we help you? \n";
@@ -199,7 +193,13 @@ if ($text == "") {
     // Business logic for first level response
     // This is a terminal request. Note how we start the response with END
     $response = "END Thank you Mr Jwambi, you are on DStv Premium @ R819.00p/m. Decoder ID: H001283850. IUC SN: 7028026166. Model: 5U. Please note, your premium will increase to R829 effective on 01 March 2021.";
-  
+ 
+    } else if ($text == "2*1*1") {
+    // Business logic for first level response
+    $response = "CON DStv Registered Installer. \n";
+    $response = "1.Find Nearby Installer. \n";
+    $response .= "2. Verify DStv Installer.";
+    
 }
 
 // Echo the response back to the API
