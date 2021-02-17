@@ -146,7 +146,7 @@ if ($text == "") {
     // This is a terminal request. Note how we start the response with END
     $response = "END Unfortunately, the Gift Voucher number is invalid. Please try with another voucher number.";
     
-} else if ($text == "2*1") {
+} else if ($text == "1*2") {
     // Business logic for first level response
     $response = "CON DStv Installer. \n";
     $response = "1.Find Nearby Installer. \n";
