@@ -34,7 +34,7 @@ if ($text == "") {
 } else if ($text == "2*2") {
     // Business logic for first level response
     $response = "CON DStv Installer verification. \n";
-    $response .= "1. Please enter your Installer ID number.";
+    $response .= "1. Please enter your DStv Installer ID number.";
     
 } else if ($text == "2*2*1") {
     // Business logic for first level response
@@ -147,7 +147,7 @@ if ($text == "") {
 } else if($text == "1*1") { 
     // This is the first request. Note how we start the response with CON
     $response  = "CON How can we help you? \n";
-    $response .= "1. Revers debit oder. \n";
+    $response .= "1. Reverse debit oder. \n";
     $response .= "2. Cancel my DStv subscription.";
     
 } else if ($text == "1*1*1") {
