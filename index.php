@@ -112,17 +112,17 @@ if ($text == "") {
     // This is a terminal request. Note how we start the response with END
     $response = "END Thank you Mr Jwambi. Your decoder was successfully removed from your DStv account.";
     
-} else if ($text == "1*2*4") {
+} else if ($text == "1*2*5") {
     // Business logic for first level response
     $response = "CON Suspend Decoder. \n";
     $response .= "1. Please enter your DStv account PIN.";
     
- } else if ($text == "1*2*4*1") {
+ } else if ($text == "1*2*5*1") {
     // Business logic for first level response
     $response = "CON Suspend Decoder. \n";
     $response .= "1. Please enter your Decoder ID number.";
     
-} else if ($text == "1*2*4*1*1") {
+} else if ($text == "1*2*5*1*1") {
     // Business logic for first level response
     // This is a terminal request. Note how we start the response with END
     $response = "END Thank you Mr Jwambi. Your decoder was successfully suspended from your DStv Premium account.";
