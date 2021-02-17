@@ -102,6 +102,67 @@ if ($text == "") {
     // This is a terminal request. Note how we start the response with END
     $response = "END Thank you Mr Jwambi, your Decoder ID H0012659981 has been successfully added to your acoount. Kindly restart your decoder.";
  
+ } else if ($text == "1*2*3") {
+    // Business logic for first level response
+    $response = "CON Remove Decoder. \n";
+    $response .= "1. Please enter your DStv account PIN.";
+    
+ } else if ($text == "1*2*3*1") {
+    // Business logic for first level response
+    $response = "CON Remove Decoder. \n";
+    $response .= "1. Please enter your Decoder ID number.";
+    
+ } else if ($text == "1*2*3*1*1") {
+    // Business logic for first level response
+    // This is a terminal request. Note how we start the response with END
+    $response = "END Thank you Mr Jwambi, your Decoder ID H0012659981 has been successfully removed from your acoount.";
+
+     } else if ($text == "1*2*4") {
+    // Business logic for first level response
+    $response = "CON Suspend Decoder. \n";
+    $response .= "1. Please enter your DStv account PIN.";
+    
+ } else if ($text == "1*2*4*1") {
+    // Business logic for first level response
+    $response = "CON Suspend Decoder. \n";
+    $response .= "1. Please enter your Decoder ID number.";
+    
+ } else if ($text == "1*2*4*1*1") {
+    // Business logic for first level response
+    // This is a terminal request. Note how we start the response with END
+    $response = "END Thank you Mr Jwambi, your Decoder ID H0012659981 has been successfully suspended from your acoount.";
+    
+ } else if ($text == "1*2*5") {
+    // Business logic for first level response
+    $response = "CON My Account \n";
+    $response .= "1. Reverse Debit Order \n";
+    $response .= "2. My Decoder \n";
+    $response .= "3. Notices \n";
+    $response .= "4. Veriy Gift Card \n";
+    $response .= "5. Back";
+    
+ } else if ($text == "1*3") {
+    // Business logic for first level response
+    // This is a terminal request. Note how we start the response with END
+    $response = "END There are currently no special offers or promotions available."
+        
+  } else if ($text == "1*4") {
+    // Business logic for first level response
+    $response = "CON Verify Gift Card. \n";
+    $response .= "1. Please enter your DStv Gift Card barcode number.";
+    
+ } else if ($text == "1*4*1") {
+    // Business logic for first level response
+    // This is a terminal request. Note how we start the response with END
+    $response = "END Thank you Mr Jwambi, your gift card is invalid. Please try again with a valid Gift Card number.";
+    
+ } else if($text == "1*2*5*5") { 
+    // This is the first request. Note how we start the response with CON
+    $response  = "CON Welcome Mr T Jwambi to your DStv Premium account. How can we help you? \n";
+    $response .= "1. My Account \n";
+    $response .= "2. Check DStv Installer ID \n";
+    $response .= "2. Settings";
+ 
 }
 
 // Echo the response back to the API
