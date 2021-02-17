@@ -152,12 +152,12 @@ if ($text == "") {
     $response = "1.Find Nearby Installer. \n";
     $response .= "2. Verify DStv Installer.";
     
- } else if ($text == "2*2") {
+ } if ($text == "2") {
     // Business logic for first level response
     $response = "CON Verify DStv Installer. \n";
     $response .= "1. Please enter DStv Installer ID number.";   
     
-  } else if ($text == "2*2*1") {
+  } else if ($text == "2*1") {
     // Business logic for first level response
     // This is a terminal request. Note how we start the response with END
     $response = "END Thank you Mr Jwambi, a nearby installer will contact you shortly.";
