@@ -32,6 +32,15 @@ if ($text == "") {
     $response .= "1. My Account \n";
     $response .= "2. Check DStv Installer ID \n";
     $response .= "2. Settings";
+    
+ } else if ($text == "1*5*1") {
+    // Business logic for first level response
+    $response = "CON My Account \n";
+    $response .= "1. Reverse Debit Order \n";
+    $response .= "2. My Decoder \n";
+    $response .= "3. Notices \n";
+    $response .= "4. Veriy Gift Card \n";
+    $response .= "5. Back";
 }
 
 // Echo the response back to the API
