@@ -29,7 +29,7 @@ if ($text == "") {
 } else if ($text == "2*1") {
     // Business logic for first level response
     // This is a terminal request. Note how we start the response with END
-    $response = "End Thank you Mr Jwambi, a DStv accredited installer will contact you soon.";
+    $response .= "End Thank you Mr Jwambi, a DStv accredited installer will contact you soon.";
  
 } else if ($text == "2*2") {
     // Business logic for first level response
