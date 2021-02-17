@@ -86,76 +86,7 @@ if ($text == "") {
     // Business logic for first level response
     // This is a terminal request. Note how we start the response with END
     $response = "END Thank you Mr Jwambi, you are on DStv Premium @ R819.00p/m. Decoder ID: H001283850. IUC SN: 7028026166. Model: 5U. Please note, your premium will increase to R829 effective on 01 March 2021.";
- 
-} else if ($text == "1*1*2*2") {
-    // Business logic for first level response
-    $response = "CON Add Decoder. \n";
-    $response .= "1. Please enter your DStv account PIN.";
-    
- } else if ($text == "1*1*2*2*1") {
-    // Business logic for first level response
-    $response = "CON Add Decoder. \n";
-    $response .= "1. Please enter your Decoder ID number.";
-    
- } else if ($text == "1*1*2*2*1*1") {
-    // Business logic for first level response
-    // This is a terminal request. Note how we start the response with END
-    $response = "END Thank you Mr Jwambi, your Decoder ID H0012659981 has been successfully added to your acoount. Kindly restart your decoder.";
- 
- } else if ($text == "1*1*2*3") {
-    // Business logic for first level response
-    $response = "CON Remove Decoder. \n";
-    $response .= "1. Please enter your DStv account PIN.";
-    
- } else if ($text == "1*1*2*3*1") {
-    // Business logic for first level response
-    $response = "CON Remove Decoder. \n";
-    $response .= "1. Please enter your Decoder ID number.";
-    
- } else if ($text == "1*1*2*3*1*1") {
-    // Business logic for first level response
-    // This is a terminal request. Note how we start the response with END
-    $response = "END Thank you Mr Jwambi, your Decoder ID H0012659981 has been successfully removed from your acoount.";
-
-     } else if ($text == "1*1*2*4") {
-    // Business logic for first level response
-    $response = "CON Suspend Decoder. \n";
-    $response .= "1. Please enter your DStv account PIN.";
-    
- } else if ($text == "1*1*2*4*1") {
-    // Business logic for first level response
-    $response = "CON Suspend Decoder. \n";
-    $response .= "1. Please enter your Decoder ID number.";
-    
- } else if ($text == "1*1*2*4*1*1") {
-    // Business logic for first level response
-    // This is a terminal request. Note how we start the response with END
-    $response = "END Thank you Mr Jwambi, your Decoder ID H0012659981 has been successfully suspended from your acoount.";
-    
- } else if ($text == "1*2*5") {
-    // Business logic for first level response
-    $response = "CON My Account \n";
-    $response .= "1. Reverse Debit Order \n";
-    $response .= "2. My Decoder \n";
-    $response .= "3. Notices \n";
-    $response .= "4. Veriy Gift Card \n";
-    $response .= "5. Back";
-    
- } else if ($text == "1*2*5*3") {
-    // Business logic for first level response
-    // This is a terminal request. Note how we start the response with END
-    $response = "END There are currently no special offers or promotions available."
-        
-  } else if ($text == "1*2*5*4") {
-    // Business logic for first level response
-    $response = "CON Verify Gift Card. \n";
-    $response .= "1. Please enter your DStv Gift Card barcode number.";
-    
- } else if ($text == "1*2*5*4*1") {
-    // Business logic for first level response
-    // This is a terminal request. Note how we start the response with END
-    $response = "END Thank you Mr Jwambi, your gift card is invalid. Please try again with a valid Gift Card number.";
- 
+  
 }
 
 // Echo the response back to the API
