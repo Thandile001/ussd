@@ -46,9 +46,8 @@ if ($text == "") {
     // Business logic for first level response
     $response = "CON Settings \n";
     $response .= "1. Upgrade DStv Package \n";
-    $response .= "2. Change PIN \n";
-    $response .= "3. Close DStv Account";
-    
+    $response .= "2. Change PIN";
+        
  } else if ($text == "3*1") {
     // Business logic for first level response
     $response = "CON Please select a package of your choice. \n";
@@ -144,7 +143,7 @@ if ($text == "") {
     // Business logic for first level response
     // This is a terminal request. Note how we start the response with END
     $response = "END Thank you Mr Jwambi, your DStv account PIN was successfully changed.";
-    
+        
 } else if($text == "1*1") { 
     // This is the first request. Note how we start the response with CON
     $response  = "CON How can we help you? \n";
