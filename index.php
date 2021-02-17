@@ -9,7 +9,7 @@ if ($text == "") {
     // This is the first request. Note how we start the response with CON
     $response  = "CON Welcome Mr T Jwambi to your DStv Premium account. How can we help you? \n";
     $response .= "1. My Account \n";
-    $response .= "2. DStv Registered Installer Guide \n";
+    $response .= "2. DStv Registered Installer \n";
     $response .= "3. Settings";
 
 } else if ($text == "1") {
@@ -146,9 +146,9 @@ if ($text == "") {
     // This is a terminal request. Note how we start the response with END
     $response = "END Unfortunately, the Gift Voucher number is invalid. Please try with another voucher number.";
     
-} else if ($text == "2") {
+} else if ($text == "1*2") {
     // Business logic for first level response
-    $response = "CON DStv Installer Guide. \n";
+    $response = "CON DStv Registered Installer. \n";
     $response = "1.Find Nearby Installer. \n";
     $response .= "2. Verify DStv Installer.";
     
