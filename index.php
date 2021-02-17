@@ -51,6 +51,26 @@ if ($text == "") {
     // Business logic for first level response
     // This is a terminal request. Note how we start the response with END
     $response = "END Thank you Mr Jwambi, your subscription with DStv has been cancelled. A message with reference number will be sent to your mobile phone number.";
+    
+} else if($text == "1*2") { 
+    // This is the first request. Note how we start the response with CON
+    $response  = "CON My Decoder \n";
+    $response .= "1. My Package Deal. \n";
+    $response .= "2. View Decoder Information. \n";
+    $response .= "3. Add New Decode. \n";
+    $response .= "4. Remove Decoder. \n";
+    $response .= "5. Suspend Decoder. \n";
+    $response .= "6. Cancel DStv subscription.";
+    
+} else if ($text == "1*2*1") {
+    // Business logic for first level response
+    $response = "CON My Package Deal. \n";
+    $response .= "1. Please enter your DStv account PIN.";
+    
+} else if ($text == "1*2*1*1") {
+    // Business logic for first level response
+    // This is a terminal request. Note how we start the response with END
+    $response = "END Thank you Mr Jwambi. Your are On DStv Premium @ R812.00 p/m.";
 
 } else if($text == "1*5") { 
     // This is the first request. Note how we start the response with CON
