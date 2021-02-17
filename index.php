@@ -29,7 +29,7 @@ if ($text == "") {
 } else if ($text == "2*1") {
     // Business logic for first level response
     // This is a terminal request. Note how we start the response with END
-    $response = "END Thank you Mr Jwambi, a DStv accredited installer will contact you soon.";
+    $response = "END Thank you Mr Jwambi, a DStv accredited installer will contact you shortly.";
  
 } else if ($text == "2*2") {
     // Business logic for first level response
@@ -48,6 +48,27 @@ if ($text == "") {
     $response .= "1. Upgrade DStv Package \n";
     $response .= "2. Change PIN \n";
     $response .= "3. Close DStv Account";
+    
+ } else if ($text == "3.1") {
+    // Business logic for first level response
+    $response = "CON Please select a package of your choice. \n";
+    $response .= "1. Premium \n";
+    $response .= "2. Family \n";
+    $response .= "3. Compact \n";
+    $response .= "4. Compact Plus \n";
+    $response .= "5. Access \n";
+    $response .= "6. EasyView \n";
+    $response .= "7. India";
+    
+} else if ($text == "3*1*1") {
+    // Business logic for first level response
+    $response = "CON Premium Package Upgrade. \n";
+    $response .= "1. Please enter your DStv account PIN.";
+    
+} else if ($text == "3*1*1*1") {
+    // Business logic for first level response
+    // This is a terminal request. Note how we start the response with END
+    $response = "END Thank you Mr Jwambi, your are already a Premium Package subscriber.";
     
 } else if($text == "1*1") { 
     // This is the first request. Note how we start the response with CON
