@@ -155,13 +155,6 @@ if ($text == "") {
     // Business logic for first level response
     // This is a terminal request. Note how we start the response with END
     $response = "END Thank you Mr Jwambi, your gift card is invalid. Please try again with a valid Gift Card number.";
-    
- } else if($text == "1*2*5*5") { 
-    // This is the first request. Note how we start the response with CON
-    $response  = "CON Welcome Mr T Jwambi to your DStv Premium account. How can we help you? \n";
-    $response .= "1. My Account \n";
-    $response .= "2. Check DStv Installer ID \n";
-    $response .= "2. Settings";
  
 }
 
