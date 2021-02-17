@@ -148,7 +148,7 @@ if ($text == "") {
     
 } else if ($text == "2") {
     // Business logic for first level response
-    $response = "CON DStv Installer. \n";
+    $response = "CON DStv Installer Guide. \n";
     $response = "1.Find Nearby Installer. \n";
     $response .= "2. Verify DStv Installer.";
     
