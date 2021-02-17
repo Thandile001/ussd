@@ -18,16 +18,17 @@ if ($text == "") {
     $response .= "1. Reverse Debit Order \n";
     $response .= "2. My Decoder \n";
     $response .= "3. Notices \n";
-    $response .= "4. Verify Gift Card";
+    $response .= "4. Veriy Gift Card \n";
+    $response .= "0. Back";
 
 } else if ($text == "2") {
     // Business logic for first level response
     // This is a terminal request. Note how we start the response with END
     $response = "END Mr Jwambi, your port request has been declined.";
 
-} else if($text == "1*1") { 
+} else if($text == "1*0") { 
     // This is a terminal request. Note how we start the response with END
-    $response = "END Thank Mr Jwambi, your mobile number has been ported succesfully. Please insert your new SIM card into your mobile phone.";
+    $response = "1.";
 }
 
 // Echo the response back to the API
