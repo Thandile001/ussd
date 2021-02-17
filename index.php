@@ -80,6 +80,56 @@ if ($text == "") {
     // This is a terminal request. Note how we start the response with END
     $response = "END Thank you Mr Jwambi, your account has now been updated to Family Package.";
     
+} else if ($text == "3*1*3") {
+    // Business logic for first level response
+    $response = "CON Compact Package Upgrade. \n";
+    $response .= "1. Please enter your DStv account PIN.";
+    
+} else if ($text == "3*1*3*1") {
+    // Business logic for first level response
+    // This is a terminal request. Note how we start the response with END
+    $response = "END Thank you Mr Jwambi, your account has now been updated to Compact Package.";
+    
+} else if ($text == "3*1*4") {
+    // Business logic for first level response
+    $response = "CON Compact Plus Package Upgrade. \n";
+    $response .= "1. Please enter your DStv account PIN.";
+    
+} else if ($text == "3*1*4*1") {
+    // Business logic for first level response
+    // This is a terminal request. Note how we start the response with END
+    $response = "END Thank you Mr Jwambi, your account has now been updated to Compact Plus Package.";
+    
+} else if ($text == "3*1*5") {
+    // Business logic for first level response
+    $response = "CON Access Package Upgrade. \n";
+    $response .= "1. Please enter your DStv account PIN.";
+    
+} else if ($text == "3*1*5*1") {
+    // Business logic for first level response
+    // This is a terminal request. Note how we start the response with END
+    $response = "END Thank you Mr Jwambi, your account has now been updated to Family Package.";
+    
+} else if ($text == "3*1*6") {
+    // Business logic for first level response
+    $response = "CON EasyView Package Upgrade. \n";
+    $response .= "1. Please enter your DStv account PIN.";
+    
+} else if ($text == "3*1*6*1") {
+    // Business logic for first level response
+    // This is a terminal request. Note how we start the response with END
+    $response = "END Thank you Mr Jwambi, your account has now been updated to EasyView Package.";
+    
+} else if ($text == "3*1*7") {
+    // Business logic for first level response
+    $response = "CON India Package Upgrade. \n";
+    $response .= "1. Please enter your DStv account PIN.";
+    
+} else if ($text == "3*1*7*1") {
+    // Business logic for first level response
+    // This is a terminal request. Note how we start the response with END
+    $response = "END Thank you Mr Jwambi, your account has now been updated to India Package.";
+    
 } else if($text == "1*1") { 
     // This is the first request. Note how we start the response with CON
     $response  = "CON How can we help you? \n";
