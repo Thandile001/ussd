@@ -70,6 +70,16 @@ if ($text == "") {
     // This is a terminal request. Note how we start the response with END
     $response = "END Thank you Mr Jwambi, your are already a Premium Package subscriber.";
     
+} else if ($text == "3*1*2") {
+    // Business logic for first level response
+    $response = "CON Family Package Upgrade. \n";
+    $response .= "1. Please enter your DStv account PIN.";
+    
+} else if ($text == "3*1*2*1") {
+    // Business logic for first level response
+    // This is a terminal request. Note how we start the response with END
+    $response = "END Thank you Mr Jwambi, your account has now been updated to Family Package.";
+    
 } else if($text == "1*1") { 
     // This is the first request. Note how we start the response with CON
     $response  = "CON How can we help you? \n";
