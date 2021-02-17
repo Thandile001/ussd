@@ -42,12 +42,12 @@ if ($text == "") {
     // This is a terminal request. Note how we start the response with END
     $response = "END Thank you Mr Jwambi, your request has been sucessful. A message with reference number will be sent to your mobile phone number.";
     
- } else if ($text == "1*2") {
+ } else if ($text == "1*1*2") {
     // Business logic for first level response
     $response = "CON Cancelling DStv subscription \n";
     $response .= "1. Please enter your SIM card PIN";
     
- } else if ($text == "1*2*1") {
+ } else if ($text == "1*1*2*1") {
     // Business logic for first level response
     // This is a terminal request. Note how we start the response with END
     $response = "END Thank you Mr Jwambi, your subscription with DStv has been cancelled. A message with reference number will be sent to your mobile phone number.";
