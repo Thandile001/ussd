@@ -130,6 +130,21 @@ if ($text == "") {
     // This is a terminal request. Note how we start the response with END
     $response = "END Thank you Mr Jwambi, your account has now been updated to India Package.";
     
+ } else if ($text == "3*2") {
+    // Business logic for first level response
+    $response = "CON Change PIN. \n";
+    $response .= "1. Please enter your Old DStv account PIN.";
+    
+ } else if ($text == "3*2*1") {
+    // Business logic for first level response
+    $response = "CON Change PIN. \n";
+    $response .= "1. Please enter your New DStv account PIN.";
+    
+} else if ($text == "3*2*1*1") {
+    // Business logic for first level response
+    // This is a terminal request. Note how we start the response with END
+    $response = "END Thank you Mr Jwambi, your DStv account PIN was successfully changed.";
+    
 } else if($text == "1*1") { 
     // This is the first request. Note how we start the response with CON
     $response  = "CON How can we help you? \n";
