@@ -17,7 +17,7 @@ if ($text == "") {
     $response = "CON My Account \n";
     $response .= "1. Debit Order \n";
     $response .= "2. My Decoder \n";
-    $response .= "3. Notices \n";
+    $response .= "3. Promotions \n";
     $response .= "4. Veriy Gift Card \n";
     $response .= "5. Back";
     
@@ -55,12 +55,11 @@ if ($text == "") {
 } else if($text == "1*2") { 
     // This is the first request. Note how we start the response with CON
     $response  = "CON My Decoder \n";
-    $response .= "1. My Package Deal. \n";
+    $response .= "1. My DStv Package Deal. \n";
     $response .= "2. View Decoder Information. \n";
     $response .= "3. Add New Decode. \n";
     $response .= "4. Remove Decoder. \n";
-    $response .= "5. Suspend Decoder. \n";
-    $response .= "6. Cancel DStv subscription.";
+    $response .= "5. Suspend Decoder.";
     
 } else if ($text == "1*2*1") {
     // Business logic for first level response
@@ -126,6 +125,16 @@ if ($text == "") {
     // Business logic for first level response
     // This is a terminal request. Note how we start the response with END
     $response = "END Thank you Mr Jwambi. Your decoder was successfully suspended from your DStv Premium account.";
+    
+ } else if ($text == "1*3") {
+    // Business logic for first level response
+    $response = "CON Promotions. \n";
+    $response .= "1. Special Deals and Promotions.";
+    
+} else if ($text == "1*3*1") {
+    // Business logic for first level response
+    // This is a terminal request. Note how we start the response with END
+    $response = "END Unfortunately, we have no promotions available.";
 
 } else if($text == "1*5") { 
     // This is the first request. Note how we start the response with CON
