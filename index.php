@@ -95,7 +95,22 @@ if ($text == "") {
 } else if ($text == "1*2*3*1*1") {
     // Business logic for first level response
     // This is a terminal request. Note how we start the response with END
-    $response = "END Thank you Mr Jwambi. Your decoder was successfully added to your DStv account.";
+    $response = "END Thank you Mr Jwambi. Your decoder was successfully added to your DStv account. Please restart decoder and wait for it to finish loading.";
+    
+ } else if ($text == "1*2*4") {
+    // Business logic for first level response
+    $response = "CON Remove Decoder. \n";
+    $response .= "1. Please enter your DStv account PIN.";
+    
+ } else if ($text == "1*2*4*1") {
+    // Business logic for first level response
+    $response = "CON Remove Decoder. \n";
+    $response .= "1. Please enter your Decoder ID number.";
+    
+} else if ($text == "1*2*4*1*1") {
+    // Business logic for first level response
+    // This is a terminal request. Note how we start the response with END
+    $response = "END Thank you Mr Jwambi. Your decoder was successfully removed from your DStv account.";
 
 } else if($text == "1*5") { 
     // This is the first request. Note how we start the response with CON
