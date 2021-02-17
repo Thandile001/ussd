@@ -49,7 +49,7 @@ if ($text == "") {
     $response .= "2. Change PIN \n";
     $response .= "3. Close DStv Account";
     
- } else if ($text == "3.1") {
+ } else if ($text == "3*1") {
     // Business logic for first level response
     $response = "CON Please select a package of your choice. \n";
     $response .= "1. Premium \n";
