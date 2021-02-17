@@ -141,17 +141,17 @@ if ($text == "") {
     $response .= "4. Veriy Gift Card \n";
     $response .= "5. Back";
     
- } else if ($text == "1*3") {
+ } else if ($text == "1*2*5*3") {
     // Business logic for first level response
     // This is a terminal request. Note how we start the response with END
     $response = "END There are currently no special offers or promotions available."
         
-  } else if ($text == "1*4") {
+  } else if ($text == "1*2*5*4") {
     // Business logic for first level response
     $response = "CON Verify Gift Card. \n";
     $response .= "1. Please enter your DStv Gift Card barcode number.";
     
- } else if ($text == "1*4*1") {
+ } else if ($text == "1*2*5*4*1") {
     // Business logic for first level response
     // This is a terminal request. Note how we start the response with END
     $response = "END Thank you Mr Jwambi, your gift card is invalid. Please try again with a valid Gift Card number.";
