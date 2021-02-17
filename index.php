@@ -7,14 +7,18 @@ $text = $_POST["text"];
 
 if ($text == "") {
     // This is the first request. Note how we start the response with CON
-    $response  = "CON Welcome Mr Thandile Jwambi, to Loxin Worx porting services. Would you like to port your mobile number? \n";
-    $response .= "1. Yes \n";
-    $response .= "2. No";
+    $response  = "CON Welcome Mr T Jwambi to your DStv Premium account. How can we help you? \n";
+    $response .= "1. My Account \n";
+    $response .= "2. Check DStv Installer ID \n";
+    $response .= "2. Settings";
 
 } else if ($text == "1") {
     // Business logic for first level response
-    $response = "CON Your are about to port your SIM card \n";
-    $response .= "1. Please enter your SIM card PIN";
+    $response = "CON My Account \n";
+    $response .= "1. Reverse Debit Order \n";
+    $response .= "2. My Decoder \n";
+    $response .= "3. Notices \n";
+    $response .= "4. Verify Gift Card";
 
 } else if ($text == "2") {
     // Business logic for first level response
