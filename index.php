@@ -18,9 +18,8 @@ if ($text == "") {
     $response .= "1. Debit Order \n";
     $response .= "2. My Decoder \n";
     $response .= "3. Promotions \n";
-    $response .= "4. Veriy Gift Card \n";
-    $response .= "5. Back";
-    
+    $response .= "4. Veriy Gift Card";
+        
  } else if ($text == "2") {
     // Business logic for first level response
     $response = "CON DStv Installer \n";
