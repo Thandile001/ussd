@@ -200,6 +200,21 @@ if ($text == "") {
     $response = "1.Find Nearby Installer. \n";
     $response .= "2. Verify DStv Installer.";
     
+} else if ($text == "2*1*1*1") {
+    // Business logic for first level response
+    // This is a terminal request. Note how we start the response with END
+    $response = "Thank you Mr Jwambi, a DStv accredited installer will contact you soon.";
+ 
+} else if ($text == "2*1*1*2") {
+    // Business logic for first level response
+    $response = "CON DStv Installer verification. \n";
+    $response .= "1. Please enter your Installer ID number.";
+    
+} else if ($text == "2*1*1*2*1") {
+    // Business logic for first level response
+    // This is a terminal request. Note how we start the response with END
+    $response = "END Thank you Mr Jwambi, your accredited DStv Installer is Jabu Dlamini.";
+    
 }
 
 // Echo the response back to the API
