@@ -71,6 +71,16 @@ if ($text == "") {
     // Business logic for first level response
     // This is a terminal request. Note how we start the response with END
     $response = "END Thank you Mr Jwambi. Your are On DStv Premium @ R812.00 p/m.";
+    
+} else if ($text == "1*2*2") {
+    // Business logic for first level response
+    $response = "CON My Decoder Information. \n";
+    $response .= "1. Please enter your DStv account PIN.";
+    
+} else if ($text == "1*2*2*1") {
+    // Business logic for first level response
+    // This is a terminal request. Note how we start the response with END
+    $response = "END Thank you Mr Jwambi. Decoder ID No: H5689754216. IUC SN: 2659564626.";
 
 } else if($text == "1*5") { 
     // This is the first request. Note how we start the response with CON
