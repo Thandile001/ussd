@@ -8,23 +8,24 @@ $text = $_POST["text"];
 if ($text == "") {
     // This is the first request. Note how we start the response with CON
     $response  = "CON Welcome Mr T Jwambi to your DStv Premium account. How can we help you? \n";
-    $response .= "1. My Account \n";
-    $response .= "2. DStv Installer \n";
-    $response .= "3. Settings";
+    $response .= "1. My Account. \n";
+    $response .= "2. DStv Installer. \n";
+    $response .= "3. Settings.";
 
 } else if ($text == "1") {
     // Business logic for first level response
-    $response = "CON My Account \n";
-    $response .= "1. Debit Order \n";
-    $response .= "2. My Decoder \n";
-    $response .= "3. Promotions \n";
-    $response .= "4. Veriy Gift Card";
+    $response = "CON My Account: \n";
+    $response .= "1. Debit Order. \n";
+    $response .= "2. My Decoder. \n";
+    $response .= "3. Promotions. \n";
+    $response .= "4. Veriy Gift Card. \n";
+    $response .= "5. Lock My Account.";
         
  } else if ($text == "2") {
     // Business logic for first level response
-    $response = "CON DStv Installer \n";
-    $response .= "1. Find nearby installer \n";
-    $response .= "2. Verify Installer";
+    $response = "CON DStv Installer: \n";
+    $response .= "1. Find nearby installer. \n";
+    $response .= "2. Verify Installer.";
       
 } else if ($text == "2*1") {
     // Business logic for first level response
@@ -33,7 +34,7 @@ if ($text == "") {
  
 } else if ($text == "2*2") {
     // Business logic for first level response
-    $response = "CON DStv Installer verification. \n";
+    $response = "CON DStv Installer verification: \n";
     $response .= "1. Please enter your DStv Installer ID number.";
     
 } else if ($text == "2*2*1") {
@@ -44,24 +45,24 @@ if ($text == "") {
     
   } else if ($text == "3") {
     // Business logic for first level response
-    $response = "CON Settings \n";
-    $response .= "1. Upgrade DStv Package \n";
-    $response .= "2. Change PIN";
+    $response = "CON Settings: \n";
+    $response .= "1. Upgrade DStv Package. \n";
+    $response .= "2. Change PIN.";
         
  } else if ($text == "3*1") {
     // Business logic for first level response
-    $response = "CON Please select a package of your choice. \n";
-    $response .= "1. Premium \n";
-    $response .= "2. Family \n";
-    $response .= "3. Compact \n";
-    $response .= "4. Compact Plus \n";
-    $response .= "5. Access \n";
-    $response .= "6. EasyView \n";
-    $response .= "7. India";
+    $response = "CON Please select a package of your choice: \n";
+    $response .= "1. Premium. \n";
+    $response .= "2. Family. \n";
+    $response .= "3. Compact. \n";
+    $response .= "4. Compact Plus. \n";
+    $response .= "5. Access. \n";
+    $response .= "6. EasyView. \n";
+    $response .= "7. India.";
     
 } else if ($text == "3*1*1") {
     // Business logic for first level response
-    $response = "CON Premium Package Upgrade. \n";
+    $response = "CON Premium Package Upgrade: \n";
     $response .= "1. Please enter your DStv account PIN.";
     
 } else if ($text == "3*1*1*1") {
@@ -71,7 +72,7 @@ if ($text == "") {
     
 } else if ($text == "3*1*2") {
     // Business logic for first level response
-    $response = "CON Family Package Upgrade. \n";
+    $response = "CON Family Package Upgrade: \n";
     $response .= "1. Please enter your DStv account PIN.";
     
 } else if ($text == "3*1*2*1") {
@@ -81,7 +82,7 @@ if ($text == "") {
     
 } else if ($text == "3*1*3") {
     // Business logic for first level response
-    $response = "CON Compact Package Upgrade. \n";
+    $response = "CON Compact Package Upgrade: \n";
     $response .= "1. Please enter your DStv account PIN.";
     
 } else if ($text == "3*1*3*1") {
@@ -91,7 +92,7 @@ if ($text == "") {
     
 } else if ($text == "3*1*4") {
     // Business logic for first level response
-    $response = "CON Compact Plus Package Upgrade. \n";
+    $response = "CON Compact Plus Package Upgrade: \n";
     $response .= "1. Please enter your DStv account PIN.";
     
 } else if ($text == "3*1*4*1") {
@@ -101,7 +102,7 @@ if ($text == "") {
     
 } else if ($text == "3*1*5") {
     // Business logic for first level response
-    $response = "CON Access Package Upgrade. \n";
+    $response = "CON Access Package Upgrade: \n";
     $response .= "1. Please enter your DStv account PIN.";
     
 } else if ($text == "3*1*5*1") {
@@ -111,7 +112,7 @@ if ($text == "") {
     
 } else if ($text == "3*1*6") {
     // Business logic for first level response
-    $response = "CON EasyView Package Upgrade. \n";
+    $response = "CON EasyView Package Upgrade: \n";
     $response .= "1. Please enter your DStv account PIN.";
     
 } else if ($text == "3*1*6*1") {
@@ -121,7 +122,7 @@ if ($text == "") {
     
 } else if ($text == "3*1*7") {
     // Business logic for first level response
-    $response = "CON India Package Upgrade. \n";
+    $response = "CON India Package Upgrade: \n";
     $response .= "1. Please enter your DStv account PIN.";
     
 } else if ($text == "3*1*7*1") {
@@ -131,12 +132,12 @@ if ($text == "") {
     
  } else if ($text == "3*2") {
     // Business logic for first level response
-    $response = "CON Change PIN. \n";
+    $response = "CON Change PIN: \n";
     $response .= "1. Please enter your Old DStv account PIN.";
     
  } else if ($text == "3*2*1") {
     // Business logic for first level response
-    $response = "CON Change PIN. \n";
+    $response = "CON Change PIN: \n";
     $response .= "1. Please enter your New DStv account PIN.";
     
 } else if ($text == "3*2*1*1") {
@@ -152,12 +153,12 @@ if ($text == "") {
     
 } else if ($text == "1*1*1") {
     // Business logic for first level response
-    $response = "CON Reverse Debit Order. \n";
+    $response = "CON Reverse Debit Order: \n";
     $response .= "1. Please enter your DStv account PIN.";
     
  } else if ($text == "1*1*1*1") {
     // Business logic for first level response
-    $response = "CON Reverse Debit Order. \n";
+    $response = "CON Reverse Debit Order: \n";
     $response .= "1. Please enter amount to be reversed.";
     
 } else if ($text == "1*1*1*1*1") {
@@ -167,7 +168,7 @@ if ($text == "") {
     
  } else if ($text == "1*1*2") {
     // Business logic for first level response
-    $response = "CON Cancelling DStv subscription. \n";
+    $response = "CON Cancelling DStv subscription: \n";
     $response .= "1. Please enter your DStv account PIN.";
     
  } else if ($text == "1*1*2*1") {
@@ -177,7 +178,7 @@ if ($text == "") {
     
 } else if($text == "1*2") { 
     // This is the first request. Note how we start the response with CON
-    $response  = "CON My Decoder \n";
+    $response  = "CON My Decoder: \n";
     $response .= "1. My DStv Package Deal. \n";
     $response .= "2. View Decoder Information. \n";
     $response .= "3. Add New Decode. \n";
@@ -186,17 +187,17 @@ if ($text == "") {
     
 } else if ($text == "1*2*1") {
     // Business logic for first level response
-    $response = "CON My Package Deal. \n";
+    $response = "CON My Package Deal: \n";
     $response .= "1. Please enter your DStv account PIN.";
     
 } else if ($text == "1*2*1*1") {
     // Business logic for first level response
     // This is a terminal request. Note how we start the response with END
-    $response = "END Thank you Mr Jwambi. Your are On DStv Premium @ R812.00 p/m.";
+    $response = "END Thank you Mr Jwambi. Your are On DStv Premium @ R819.00 p/m.";
     
 } else if ($text == "1*2*2") {
     // Business logic for first level response
-    $response = "CON My Decoder Information. \n";
+    $response = "CON My Decoder Information: \n";
     $response .= "1. Please enter your DStv account PIN.";
     
 } else if ($text == "1*2*2*1") {
@@ -206,12 +207,12 @@ if ($text == "") {
     
  } else if ($text == "1*2*3") {
     // Business logic for first level response
-    $response = "CON Add Decoder. \n";
+    $response = "CON Add Decoder: \n";
     $response .= "1. Please enter your DStv account PIN.";
     
  } else if ($text == "1*2*3*1") {
     // Business logic for first level response
-    $response = "CON Add Decoder. \n";
+    $response = "CON Add Decoder: \n";
     $response .= "1. Please enter your Decoder ID number.";
     
 } else if ($text == "1*2*3*1*1") {
@@ -221,12 +222,12 @@ if ($text == "") {
     
  } else if ($text == "1*2*4") {
     // Business logic for first level response
-    $response = "CON Remove Decoder. \n";
+    $response = "CON Remove Decoder: \n";
     $response .= "1. Please enter your DStv account PIN.";
     
  } else if ($text == "1*2*4*1") {
     // Business logic for first level response
-    $response = "CON Remove Decoder. \n";
+    $response = "CON Remove Decoder: \n";
     $response .= "1. Please enter your Decoder ID number.";
     
 } else if ($text == "1*2*4*1*1") {
@@ -236,12 +237,12 @@ if ($text == "") {
     
 } else if ($text == "1*2*5") {
     // Business logic for first level response
-    $response = "CON Suspend Decoder. \n";
+    $response = "CON Suspend Decoder: \n";
     $response .= "1. Please enter your DStv account PIN.";
     
  } else if ($text == "1*2*5*1") {
     // Business logic for first level response
-    $response = "CON Suspend Decoder. \n";
+    $response = "CON Suspend Decoder: \n";
     $response .= "1. Please enter your Decoder ID number.";
     
 } else if ($text == "1*2*5*1*1") {
@@ -251,7 +252,7 @@ if ($text == "") {
     
  } else if ($text == "1*3") {
     // Business logic for first level response
-    $response = "CON Promotions. \n";
+    $response = "CON Promotions: \n";
     $response .= "1. Special Deals and Promotions.";
     
 } else if ($text == "1*3*1") {
@@ -261,7 +262,7 @@ if ($text == "") {
     
 } else if ($text == "1*4") {
     // Business logic for first level response
-    $response = "CON Verify Gift Cards. \n";
+    $response = "CON Verify Gift Cards: \n";
     $response .= "1. Please enter Gift Voucher number.";
     
 } else if ($text == "1*4*1") {
@@ -271,32 +272,26 @@ if ($text == "") {
         
 } else if($text == "1*5") { 
     // This is the first request. Note how we start the response with CON
-    $response  = "CON Welcome Mr T Jwambi to your DStv Premium account. How can we help you? \n";
-    $response .= "1. My Account \n";
-    $response .= "2. DStv Installer \n";
-    $response .= "3. Settings";
+    $response  = "CON Lock My Account: \n";
+    $response .= "1. Please enter your account PIN.";
     
  } else if ($text == "1*5*1") {
     // Business logic for first level response
-    $response = "CON My Account \n";
-    $response .= "1. Reverse Debit Order \n";
-    $response .= "2. My Decoder \n";
-    $response .= "3. Notices \n";
-    $response .= "4. Veriy Gift Card \n";
-    $response .= "5. Back";
+    // This is a terminal request. Note how we start the response with END
+    $response = "END Thank you Mr Jwambi. Your DStv account has been successfully locked. Please note, In order to transact on it again, you will be required to unlock it again.";
     
  } else if ($text == "1*1*2") {
     // Business logic for first level response
-    $response = "CON My Decoder \n";
-    $response .= "1. View Decoder Information \n";
-    $response .= "2. Add Decoder \n";
-    $response .= "3. Remove Decoder \n";
-    $response .= "4. Suspend Decoder \n";
-    $response .= "5. Back";
+    $response = "CON My Decoder: \n";
+    $response .= "1. View Decoder Information. \n";
+    $response .= "2. Add Decoder. \n";
+    $response .= "3. Remove Decoder. \n";
+    $response .= "4. Suspend Decoder. \n";
+    $response .= "5. Back.";
     
   } else if ($text == "1*1*2*1") {
     // Business logic for first level response
-    $response = "CON Decoder Information. \n";
+    $response = "CON Decoder Information: \n";
     $response .= "1. Please enter your DStv account PIN.";
     
  } else if ($text == "1*1*2*1*1") {
